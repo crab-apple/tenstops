@@ -1,15 +1,18 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import {Loader} from 'semantic-ui-react'
+import {Loader, Header} from 'semantic-ui-react'
 
 const Read = ({read, content}) => {
   if (read && content) {
     let parCounter = 1;
     return (
         <div>
-          <h1>
+          <Header>
             {read.title}
-          </h1>
+            <Header.Subheader>
+              by {read.author}
+            </Header.Subheader>
+          </Header>
           <div>
             {content.split("\n").map((p) => <p key={parCounter++}>{p}</p>)}
           </div>
