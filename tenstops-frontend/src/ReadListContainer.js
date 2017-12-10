@@ -12,9 +12,7 @@ class ReadListContainer extends Component {
 
   componentWillMount() {
     fetchReads().then((reads) => {
-      this.setState({
-        reads: reads
-      });
+      this.setState({ reads });
     });
   }
 
