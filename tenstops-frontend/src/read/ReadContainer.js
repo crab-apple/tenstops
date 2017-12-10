@@ -1,37 +1,35 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import Read from './Read'
-import {fetchRead, fetchReadContent} from '../api'
+import { fetchRead, fetchReadContent } from '../api'
 
 class ReadContainer extends Component {
-
-  constructor() {
-    super();
+  constructor () {
+    super()
     this.state = {
       read: null,
       content: null
     }
   }
 
-  componentWillMount() {
+  componentWillMount () {
     fetchRead(this.props.readId).then((read) => {
-      this.setState({read});
-    });
+      this.setState({read})
+    })
     fetchReadContent(this.props.readId).then(content => {
-      this.setState({content});
-    });
+      this.setState({content})
+    })
   }
 
-  render() {
+  render () {
     return (
-        <Read read={this.state.read} content={this.state.content}/>
-    );
+      <Read read={this.state.read} content={this.state.content} />
+    )
   }
-
 }
 
 ReadContainer.propTypes = {
   readId: PropTypes.number.isRequired
-};
+}
 
-export default ReadContainer;
+export default ReadContainer

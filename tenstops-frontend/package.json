@@ -10,12 +10,13 @@
     "semantic-ui-react": "^0.77.0"
   },
   "devDependencies": {
-    "react-scripts": "1.0.17"
+    "react-scripts": "1.0.17",
+    "standard": "^10.0.3"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "test": "node_modules/.bin/standard && react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   }
 }
