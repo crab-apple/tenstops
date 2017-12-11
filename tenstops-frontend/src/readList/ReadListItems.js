@@ -1,6 +1,7 @@
 import React from 'react'
 import { List } from 'semantic-ui-react'
 import PropTypes from 'prop-types'
+import ReadShape from '../read/ReadShape'
 import ReadListItem from './ReadListItem'
 
 export default function ReadListItems ({reads}) {
@@ -12,5 +13,5 @@ export default function ReadListItems ({reads}) {
 }
 
 ReadListItems.propTypes = {
-  reads: PropTypes.arrayOf(PropTypes.object).isRequired
+  reads: PropTypes.arrayOf(ReadShape).isRequired
 }

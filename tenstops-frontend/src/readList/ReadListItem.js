@@ -1,7 +1,7 @@
 import React from 'react'
 import { List } from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
-import PropTypes from 'prop-types'
+import ReadShape from '../read/ReadShape'
 
 export default function ReadListItem ({read}) {
   return (
@@ -17,5 +17,5 @@ export default function ReadListItem ({read}) {
 }
 
 ReadListItem.propTypes = {
-  read: PropTypes.object.isRequired
+  read: ReadShape
 }

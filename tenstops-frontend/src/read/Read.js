@@ -1,10 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import ReadShape from './ReadShape'
 import { Loader, Header } from 'semantic-ui-react'
 
 const Read = ({read, content}) => {
   if (read && content) {
-    let parCounter = 1
     return (
       <div>
         <Header>
@@ -13,9 +13,7 @@ const Read = ({read, content}) => {
             by {read.author}
           </Header.Subheader>
         </Header>
-        <div>
-          {content.split('\n').map((p) => <p key={parCounter++}>{p}</p>)}
-        </div>
+        <Paragraphs text={content} />
       </div>
     )
   } else {
@@ -23,8 +21,20 @@ const Read = ({read, content}) => {
   }
 }
 
+const Paragraphs = ({text}) => {
+  let parCounter = 1
+  const paragraphs = text.split('\n')
+    .map((p) => p.trim())
+    .filter((p) => p.length)
+  return (
+    <div>
+      {paragraphs.map((p) => <p key={parCounter++}>{p}</p>)}
+    </div>
+  )
+}
+
 Read.propTypes = {
-  read: PropTypes.object,
+  read: ReadShape,
   content: PropTypes.string
 }
 

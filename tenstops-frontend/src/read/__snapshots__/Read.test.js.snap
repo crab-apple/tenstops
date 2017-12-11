@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot 1`] = `
+<div>
+  <div
+    className="ui header"
+  >
+    Novel 1
+    <div
+      className="sub header"
+    >
+      by 
+      John Doe 1
+    </div>
+  </div>
+  <div>
+    <p>
+      foo bar bar
+    </p>
+    <p>
+      bar bar foo
+    </p>
+  </div>
+</div>
+`;

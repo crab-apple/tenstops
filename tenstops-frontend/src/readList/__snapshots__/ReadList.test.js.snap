@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot 1`] = `
+<div
+  className="ui divided relaxed list"
+  role="list"
+>
+  <div
+    className="item"
+    data-value={undefined}
+    onClick={[Function]}
+    role="listitem"
+  >
+    <a
+      href="/read/1"
+      onClick={[Function]}
+    >
+      <div
+        className="header"
+      >
+        Novel 1
+      </div>
+      John Doe 1
+    </a>
+  </div>
+  <div
+    className="item"
+    data-value={undefined}
+    onClick={[Function]}
+    role="listitem"
+  >
+    <a
+      href="/read/2"
+      onClick={[Function]}
+    >
+      <div
+        className="header"
+      >
+        Novel 2
+      </div>
+      John Doe 2
+    </a>
+  </div>
+  <div
+    className="item"
+    data-value={undefined}
+    onClick={[Function]}
+    role="listitem"
+  >
+    <a
+      href="/read/3"
+      onClick={[Function]}
+    >
+      <div
+        className="header"
+      >
+        Novel 3
+      </div>
+      John Doe 3
+    </a>
+  </div>
+</div>
+`;
